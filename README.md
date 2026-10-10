@@ -2,7 +2,7 @@
 
 Async Python client for the local API of [Tinkerforge WARP](https://www.warp-charger.com/) wallboxes and the WARP Energy Manager.
 
-It keeps one WebSocket open for push updates (no polling) and sends commands over HTTP. It powers the [Tinkerforge WARP Home Assistant integration](https://github.com/schliflo/ha-warp), but has no Home Assistant dependency.
+It keeps one WebSocket open for push updates (no polling) and sends commands over HTTP. It powers the [Tinkerforge WARP Home Assistant integration](https://github.com/schliflo/ha-warp-charger), but has no Home Assistant dependency.
 
 - Full state mirror: every API topic (`evse/state`, `meters/0/values`, …) in one dict, kept current by the device's push stream
 - Topic and connection callbacks
