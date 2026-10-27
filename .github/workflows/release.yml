@@ -13,5 +13,6 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - uses: astral-sh/setup-uv@v7
+      - run: test "v$(uv version --short)" = "$GITHUB_REF_NAME" || { echo "::error::Tag $GITHUB_REF_NAME != pyproject version"; exit 1; }
       - run: uv build
       - uses: pypa/gh-action-pypi-publish@release/v1
